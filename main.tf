@@ -18,6 +18,7 @@
  *   location = ["North Europe"]
  *   resource_group_name = "my-resource-group"
  * }
+ *```
  */
 
 provider "azurerm" {}
