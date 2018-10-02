@@ -2,7 +2,7 @@
 
 Azure LB Masters
 ============
-This module create a load balancer to acces the masters externally.
+This module create a load balancer to access the masters externally.
 
 EXAMPLE
 -------
