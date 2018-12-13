@@ -10,7 +10,7 @@ EXAMPLE
 ```hcl
 module "lb-masters" {
   source  = "dcos-terraform/lb-masters/azurerm"
-  version = "~> 0.1"
+  version = "~> 0.1.0"
 
   cluster_name = "production"
 
