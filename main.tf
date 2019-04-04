@@ -32,6 +32,9 @@ module "masters" {
   location            = "${var.location}"
   resource_group_name = "${var.resource_group_name}"
 
+  instance_nic_ids       = ["${var.instance_nic_ids}"]
+  ip_configuration_names = ["${var.ip_configuration_names}"]
+
   providers = {
     azurerm = "azurerm"
   }
@@ -39,6 +42,8 @@ module "masters" {
   probe {
     port = 5050
   }
+
+  num = "${var.num}"
 
   tags = "${var.tags}"
 }
