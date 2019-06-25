@@ -26,7 +26,11 @@ variable "tags" {
   default     = {}
 }
 
-# Number of Instance
 variable "num" {
   description = "How many instances should be created"
+}
+
+variable "name_prefix" {
+  description = "Name Prefix"
+  default     = ""
 }
