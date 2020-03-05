@@ -39,6 +39,12 @@ module "masters" {
     azurerm = "azurerm"
   }
 
+  additional_rules = [
+    {
+      frontend_port = "${var.adminrouter_grpc_proxy_port}"
+    },
+  ]
+
   probe {
     port = 5050
   }
