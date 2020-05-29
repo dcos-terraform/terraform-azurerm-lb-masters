@@ -4,7 +4,7 @@ variable "cluster_name" {
 
 variable "instance_nic_ids" {
   description = "List of instance nic ids created by this module"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "resource_group_name" {
@@ -17,7 +17,7 @@ variable "location" {
 
 variable "tags" {
   description = "Add custom tags to all resources"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
@@ -29,3 +29,4 @@ variable "name_prefix" {
   description = "Name Prefix"
   default     = ""
 }
+
