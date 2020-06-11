@@ -21,29 +21,31 @@
  *```
  */
 
-provider "azurerm" {}
+provider "azurerm" {
+}
 
 module "masters" {
   source  = "dcos-terraform/lb/azurerm"
   version = "~> 0.2.0"
 
-  cluster_name = "${var.cluster_name}"
-  name_prefix  = "${var.name_prefix}"
+  cluster_name = var.cluster_name
+  name_prefix  = var.name_prefix
 
-  location            = "${var.location}"
-  resource_group_name = "${var.resource_group_name}"
+  location            = var.location
+  resource_group_name = var.resource_group_name
 
-  instance_nic_ids = ["${var.instance_nic_ids}"]
+  instance_nic_ids = [var.instance_nic_ids]
 
   providers = {
-    azurerm = "azurerm"
+    azurerm = azurerm
   }
 
-  probe {
+  probe = {
     port = 5050
   }
 
-  num = "${var.num}"
+  num = var.num
 
-  tags = "${var.tags}"
+  tags = var.tags
 }
+
